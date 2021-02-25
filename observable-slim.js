@@ -222,6 +222,7 @@ var ObservableSlim = (function() {
 					"type":"delete"
 					,"target":target
 					,"property":property
+					,"parent":path.map(o => o.property).slice(1)
 					,"newValue":null
 					,"previousValue":previousValue[property]
 					,"currentPath":_getPath(target, property)
@@ -299,6 +300,7 @@ var ObservableSlim = (function() {
 						"type":type
 						,"target":target
 						,"property":property
+						,"parent":path.map(o => o.property).slice(1)
 						,"newValue":value
 						,"previousValue":receiver[property]
 						,"currentPath":_getPath(target, property)
